@@ -1,0 +1,43 @@
+<div class="searh-container">
+  <div class="list-container">
+    <div class="list">
+      <h1 class="header">IMDb "Top 1000" (Sorted by IMDb Rating Descending)</h1>
+    </div>
+    <div class="nav">
+      <br class="clear" />
+      <div class="display-mode view">
+        View Mode:
+        <a
+          href="/search/title/?groups=top_1000&amp;sort=user_rating,desc&amp;count=100&amp;view=simple"
+          class="compact"
+        >
+          Compact
+        </a>
+        <span class="ghost">|</span
+        ><a
+          href="/search/title/?groups=top_1000&amp;sort=user_rating,desc&amp;count=100&amp;view=advanced"
+          class="detailed"
+        >
+          <strong>Detailed</strong>
+        </a>
+      </div>
+      <div class="desc">
+        <span>1-100 of 1,000 titles.</span>
+        <span class="ghost">|</span>
+        <a
+          href="/search/title/?groups=top_1000&amp;sort=user_rating,desc&amp;count=100&amp;start=101&amp;ref_=adv_nxt"
+          class="lister-page-next next-page"
+          >Next »</a
+        >
+      </div>
+    </div>
+
+    <br />
+
+    <app-filter></app-filter>
+
+    <div class="card-list-container">
+      <app-card></app-card>
+    </div>
+  </div>
+</div>

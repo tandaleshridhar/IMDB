@@ -1,0 +1,72 @@
+<div *ngFor="let card of cards; let i = index">
+  <div class="card">
+    <div class="lister-item-image float-left">
+      <a href="/title/tt0111161/?ref_=adv_li_i">
+        <img
+          alt="The Shawshank Redemption"
+          class="loadlate"
+          data-tconst="tt0111161"
+          height="98"
+          src="https://m.media-amazon.com/images/M/MV5BM2MyNjYxNmUtYTAwNi00MTYxLWJmNWYtYzZlODY3ZTk3OTFlXkEyXkFqcGdeQXVyNzkwMjQ5NzM@._V1_UY98_CR1,0,67,98_AL_.jpg"
+          width="67"
+        />
+      </a>
+    </div>
+
+    <div class="card-content">
+      <div>
+        <h3 class="lister-item-header">
+          <span class="lister-item-index unbold text-primary">1</span>
+
+          <a href="/title/tt0111161/?ref_=adv_li_tt">{{card?.Title}}</a>
+          <span class="lister-item-year text-muted unbold">({{card?.Year}})</span>
+        </h3>
+        <div class="list-ribbon">
+          <img
+            src="../../assets/images/bookmark-32.png"
+            alt="Add to watchlist"
+          />
+        </div>
+      </div>
+      <div class="basic-info"><span> {{card?.Rated}} | {{card?.Runtime}} | {{card?.Genre}}</span></div>
+      <div class="rating">
+        <img src="../../assets/images/iconfinder_star_299040.png" alt="" />
+        <h4>9.2</h4>
+        <img src="../../assets/images/star-empty-24.png" alt="" />
+        <h4><a href="#">Rate this</a></h4>
+        <span class="meter">100</span>
+        <span>Metascore</span>
+      </div>
+      <div>
+        <p>
+          {{card?.Writer}}
+        </p>
+      </div>
+      <br />
+      <div>
+        <span>Director: <a href="#">{{card?.Director}}</a></span>|
+        <span>Stars:<a href="#">{{card?.Actors}}</a></span>
+      </div>
+      <br />
+      <div class="income">
+        <p>Votes:</p>
+        <span> 2,184,331 </span>|
+        <p>Gross:</p>
+        <span>$28.34M</span>
+      </div>
+      <div>
+        <button id="myBtn" (click)="changeStyle()">Review</button>  
+        <div id="myModal"  [style.display]="displayPosition" class="modal">
+          <div class="modal-content">
+            <h2>Review this movie</h2>
+            <span class="close" (click)="changeStyle1()">&times;</span>
+            <input type="text" name="review">
+            <input type="submit" value="Submit">
+          </div>
+        </div>
+      </div>      
+    </div>
+  </div>
+</div>
+
+
